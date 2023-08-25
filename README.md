@@ -6,3 +6,4 @@ While the following Fast Start Guides are developed for use on the IBM LinuxONE 
 
 ### Available guides
 ---
+[Deploy K3s and Rancher Manager](https://github.com/mfriesenegger/linuxone-fast-start/blob/main/rancher/1_deploy_k3s_and_rancher_manager.md) - Setup a single node Kubernetes environment with a web UI based Kubernetes management application.
