@@ -43,7 +43,7 @@ Let's deploy K3s using the steps below which are from [Quick-Start Guide](https:
 1. Execute the following command to deploy the single node K3s Kubernetes cluster. Replace *<HIGHEST_K3S_VERSION_SUPPORTED>* with the version that was noted earlier.
 
     ```
-    sudo curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL="<HIGHEST_K3S_VERSION_SUPPORTED>" K3S_KUBECONFIG_MODE="644" sh -`
+    sudo curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL="<HIGHEST_K3S_VERSION_SUPPORTED>" K3S_KUBECONFIG_MODE="644" sh -
     ```
 
     For example:
