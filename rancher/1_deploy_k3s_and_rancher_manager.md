@@ -65,6 +65,10 @@ Let's deploy K3s using the steps below which are from [Quick-Start Guide](https:
     kubectl get nodes
     ```
 
+    Continue waiting when the following message is reported because Kubernetes is not fully configured.
+
+    `E0826 16:36:38.189678   13687 memcache.go:287] couldn't get resource list for metrics.k8s.io/v1beta1: the server is currently unable to handle the request`
+
 4. View the namespaces and pods that have been deployed. It may take one to two minutes for the Kubernetes cluster to fully configure itself.
 
     ```
@@ -128,7 +132,11 @@ Let's deploy Rancher Manager using the steps below which are from [Install Ranch
 
 5. Find, copy and execute the command in the output from deploying Rancher.  The command will look similar to what is shown below.
 
-    `    echo https://<IP_OF_LINUX_NODE>.sslip.io/dashboard/?setup=$(kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{.data.bootstrapPassword|base64decode}}')`
+    `echo https://<IP_OF_LINUX_NODE>.sslip.io/dashboard/?setup=$(kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{.data.bootstrapPassword|base64decode}}')`
+
+    Continue waiting when the following message is reported because Rancher Manager is not fully deployed.
+
+    `Error from server (NotFound): secrets "bootstrap-secret" not found`
 
 6. Copy the URL from the output of the above comand that will be used to access the Rancher Manager Web UI. The output will look similar to:
 
